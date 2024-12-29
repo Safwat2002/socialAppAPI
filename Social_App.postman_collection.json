@@ -1,0 +1,581 @@
+{
+	"info": {
+		"_postman_id": "f67077b4-abc8-4127-9efc-cd884409fded",
+		"name": "Social_App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33068396"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Get A Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"posts",
+								"676016f21a9c84bd42f2a786"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \"this is simple description for testing purposes\",\r\n    \"img\": \"https://scontent.fjrs25-1.fna.fbcdn.net/v/t39.30808-6/349190727_639820581528498_4018926130290815166_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=uvvZB5zcBUcQ7kNvgHLcCdZ&_nc_zt=23&_nc_ht=scontent.fjrs25-1.fna&_nc_gid=ASQlyV6CqUqhFDMJR9b7E1Z&oh=00_AYBawp2ZLzz2VERHAEjMWtwAe8n8fLm4LbGlIb0azR_VhQ&oe=6765C56D\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/posts/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"posts",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"posts",
+								"676016f21a9c84bd42f2a786"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\": \" this is simple updated post description ddddd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"posts",
+								"676016f21a9c84bd42f2a786"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LikeOrDislike A Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786/likeDislike",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"posts",
+								"676016f21a9c84bd42f2a786",
+								"likeDislike"
+							]
+						},
+						"description": "any user can like or dislike a post but he must be logged in\n\n- if the post already liked then dislike\n    \n- if the post is disliked then like\n    \n- if the post is loved the unlove then like"
+					},
+					"response": []
+				},
+				{
+					"name": "LoveOrUnlove A Post",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786/loveUnlove",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"posts",
+								"676016f21a9c84bd42f2a786",
+								"loveUnlove"
+							]
+						},
+						"description": "any user can love or unlove a post but he must be logged in\n\n- if the post already loved then unlove\n    \n- if the post is unloved then love\n    \n- if the post is liked the dislike then love"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific User Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/posts/674f162ddcece65c238e09e0/allPosts",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"posts",
+								"674f162ddcece65c238e09e0",
+								"allPosts"
+							]
+						},
+						"description": "get specific user posts\n\n- useful for designing the logged in user profile\n    \n- useful for checking another user profile"
+					},
+					"response": []
+				},
+				{
+					"name": "TimeLine Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/posts/timeline/all",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"posts",
+								"timeline",
+								"all"
+							]
+						},
+						"description": "this return the all posts for all friends which the logged in user is following"
+					},
+					"response": []
+				}
+			],
+			"description": "the requests which access the postsRoute"
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"safwat\",\r\n    \"fullName\": \"Safwat Nabeel\",\r\n    \"description\":\"Hey, My Name Is Safwat nabeel\",\r\n    \"relationship\":\"1\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/users/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"00000000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/users/",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								""
+							]
+						},
+						"description": "user can delete his own account, only logged in users can delete their accounts"
+					},
+					"response": [
+						{
+							"name": "Delete User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"00000000\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api_url}}/users/",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"users",
+										""
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": "{\r\n    \"password\":\"1234\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/users/675ede8d0406be916eb890c8",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"675ede8d0406be916eb890c8"
+							]
+						},
+						"description": "get information about single user which is public information,\r\nexcept the password, date of last update, and the privilage level"
+					},
+					"response": [
+						{
+							"name": "Get Single User Data",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/api/users/675ede8d0406be916eb890c8",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"675ede8d0406be916eb890c8"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Unfollow User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/users/675ede8d0406be916eb890c8/unfollow",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"675ede8d0406be916eb890c8",
+								"unfollow"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unfollow Yourself",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/users/674f162ddcece65c238e09e0/unfollow",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"users",
+										"674f162ddcece65c238e09e0",
+										"unfollow"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Unfollow Already Unfollowed User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/users/675ede8d0406be916eb890c8/unfollow",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"users",
+										"675ede8d0406be916eb890c8",
+										"unfollow"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Follow User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/users/674f162ddcece65c238e09e0/follow",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"674f162ddcece65c238e09e0",
+								"follow"
+							]
+						},
+						"description": "following a user by requesting this url and passing the user id as parameter in the url, the user who follows must be logged in\r\n- you can't follow yourself (if you passed your id as parameter)\r\n- you already following the user (if you passed id for a user you already following)"
+					},
+					"response": [
+						{
+							"name": "Follow Yourself",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:3110/api/users/674f162ddcece65c238e09e0/follow",
+									"host": [
+										"localhost"
+									],
+									"port": "3110",
+									"path": [
+										"api",
+										"users",
+										"674f162ddcece65c238e09e0",
+										"follow"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						},
+						{
+							"name": "Follow User Already Followed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"url": {
+									"raw": "{{api_url}}/users/675ede8d0406be916eb890c8/follow",
+									"host": [
+										"{{api_url}}"
+									],
+									"path": [
+										"users",
+										"675ede8d0406be916eb890c8",
+										"follow"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "Check IF Username Is Available",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Check If Email Available",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/users/checkEmail/safwat@gmail.com",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"checkEmail",
+								"safwat@gmail.com"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "User Login",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"safwat\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/auth/login",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"khalil\",\r\n    \"email\":\"khalil@gmail.com\",\r\n    \"password\":\"00000000\",\r\n    \"isAdmin\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/auth/register",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/auth/logout",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
