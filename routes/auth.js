@@ -25,10 +25,10 @@ router.post("/register", async (req, res, next)=>{
         // save the created user into the database
         await user.save();
 
-        const {password, isAdmin, ...rest} = user._doc;
+        // const {password, isAdmin, ...rest} = user._doc;
 
         // return the user data as response to the requesting party
-        res.status(201).json({message:"User Added Successfully", status:200, rest})
+        res.status(201).json({message:"User Added Successfully", status:200})
 
     }catch(err){
         // handling the error
@@ -62,7 +62,7 @@ router.post("/login", async (req, res, next)=>{
         
         const token = createToken({username:user.username, isAdmin:user.isAdmin });
 
-        const {password, ...rest} = user._doc
+        const {password,isAdmin, ...rest} = user._doc
 
         res.cookie("user_login_session", token, {httpOnly: true}).status(202).json(rest);
 
