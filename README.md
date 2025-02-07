@@ -6,7 +6,7 @@
 
 
 
-#### ** user managment
+#### **user managment
 | Request Method | Endpoint    |  Description |
 |----------------|-------------|--------------|
 | **GET** | /users/:id | get Single User information |
