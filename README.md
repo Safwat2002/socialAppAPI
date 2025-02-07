@@ -5,6 +5,7 @@
 **Base URL : http://localhost:3001/api** 
 
 | Request Method | Endpoint    |  Description |
+|----------------|-------------|--------------|
 | **GET** | /users/:id | get Single User information |
 
 | Name     | Age | Country |
