@@ -2,8 +2,11 @@
 
 ## API endpoints
 
-**Base URL : http://localhost:3001/api** 
+### **Base URL : http://localhost:3001/api** 
 
+
+
+#### ** user managment
 | Request Method | Endpoint    |  Description |
 |----------------|-------------|--------------|
 | **GET** | /users/:id | get Single User information |
@@ -14,9 +17,3 @@
 | **PUT** | /users/:id/unfollow | the logged in user unfollow the user with specified id |
 | **PUT** | /users/ | Update userInformation for the user how send the request (logged in user) |
 | **DELETE** | /users/ | Delete the user account by admin or by deactivate it |
-
-| Name     | Age | Country |
-|----------|-----|---------|
-| John     | 25  | USA     |
-| Alice    | 30  | Canada  |
-| Bob      | 22  | UK      |
