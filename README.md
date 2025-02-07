@@ -7,6 +7,13 @@
 | Request Method | Endpoint    |  Description |
 |----------------|-------------|--------------|
 | **GET** | /users/:id | get Single User information |
+| **GET** | /users/me/info | the user gets his own information - more data available - |
+| **GET** | /users/:id/follow | the logged in user follow the user with specified id |
+| **GET** | /users/:id/unfollow | the logged in user unfollow the user with specified id |
+| **GET** | /users/checkUsername/:username | check if the username available for usage or its already exists in db|
+| **GET** | /users/checkEmail/:email | check if the email available for usage or its already exists in db |
+| **PUT** | /users/ | Update userInformation for the user how send the request (logged in user) |
+| **DELETE** | /users/ | Delete the user account by admin or by deactivate it |
 
 | Name     | Age | Country |
 |----------|-----|---------|
