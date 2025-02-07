@@ -15,13 +15,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786",
+							"raw": "{{api_url}}/posts/67927b976744fdb3e34ddb85",
 							"host": [
 								"{{api_url}}"
 							],
 							"path": [
 								"posts",
-								"676016f21a9c84bd42f2a786"
+								"67927b976744fdb3e34ddb85"
 							]
 						}
 					},
@@ -33,22 +33,27 @@
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"description\": \"this is simple description for testing purposes\",\r\n    \"img\": \"https://scontent.fjrs25-1.fna.fbcdn.net/v/t39.30808-6/349190727_639820581528498_4018926130290815166_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=uvvZB5zcBUcQ7kNvgHLcCdZ&_nc_zt=23&_nc_ht=scontent.fjrs25-1.fna&_nc_gid=ASQlyV6CqUqhFDMJR9b7E1Z&oh=00_AYBawp2ZLzz2VERHAEjMWtwAe8n8fLm4LbGlIb0azR_VhQ&oe=6765C56D\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Safwat Nabeel/Desktop/Association, Composition UML.JPG"
+								},
+								{
+									"key": "description",
+									"value": "this is simple post description",
+									"type": "text"
 								}
-							}
+							]
 						},
 						"url": {
-							"raw": "{{api_url}}/posts/",
+							"raw": "{{api_url}}/posts",
 							"host": [
 								"{{api_url}}"
 							],
 							"path": [
-								"posts",
-								""
+								"posts"
 							]
 						}
 					},
@@ -59,15 +64,6 @@
 					"request": {
 						"method": "DELETE",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786",
 							"host": [
@@ -114,13 +110,13 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786/likeDislike",
+							"raw": "{{api_url}}/posts/67927b976744fdb3e34ddb85/likeDislike",
 							"host": [
 								"{{api_url}}"
 							],
 							"path": [
 								"posts",
-								"676016f21a9c84bd42f2a786",
+								"67927b976744fdb3e34ddb85",
 								"likeDislike"
 							]
 						},
@@ -134,13 +130,13 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{api_url}}/posts/676016f21a9c84bd42f2a786/loveUnlove",
+							"raw": "{{api_url}}/posts/67927b976744fdb3e34ddb85/loveUnlove",
 							"host": [
 								"{{api_url}}"
 							],
 							"path": [
 								"posts",
-								"676016f21a9c84bd42f2a786",
+								"67927b976744fdb3e34ddb85",
 								"loveUnlove"
 							]
 						},
@@ -154,13 +150,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{api_url}}/posts/674f162ddcece65c238e09e0/allPosts",
+							"raw": "{{api_url}}/posts/678f7a1a9852a4703032c7a7/allPosts",
 							"host": [
 								"{{api_url}}"
 							],
 							"path": [
 								"posts",
-								"674f162ddcece65c238e09e0",
+								"678f7a1a9852a4703032c7a7",
 								"allPosts"
 							]
 						},
@@ -392,13 +388,13 @@
 						"method": "PUT",
 						"header": [],
 						"url": {
-							"raw": "{{api_url}}/users/674f162ddcece65c238e09e0/follow",
+							"raw": "{{api_url}}/users/6792a36eaaf50a23445e0df5/follow",
 							"host": [
 								"{{api_url}}"
 							],
 							"path": [
 								"users",
-								"674f162ddcece65c238e09e0",
+								"6792a36eaaf50a23445e0df5",
 								"follow"
 							]
 						},
@@ -472,7 +468,18 @@
 					"name": "Check IF Username Is Available",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/users/checkUsername/safwat",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"checkUsername",
+								"safwat"
+							]
+						}
 					},
 					"response": []
 				},
@@ -494,6 +501,25 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "get User His Own Detailed Data",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/users/me/info",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"users",
+								"me",
+								"info"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -502,15 +528,12 @@
 			"item": [
 				{
 					"name": "User Login",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
 					"request": {
-						"method": "GET",
+						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"safwat\",\r\n    \"password\": \"1234\"\r\n}",
+							"raw": "{\r\n    \"username\":\"snabeel\",\r\n    \"password\": \"00000000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -537,7 +560,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\":\"khalil\",\r\n    \"email\":\"khalil@gmail.com\",\r\n    \"password\":\"00000000\",\r\n    \"isAdmin\":true\r\n}",
+							"raw": "{\r\n    \"username\":\"sami\",\r\n    \"email\":\"sami@gmail.com\",\r\n    \"password\":\"00000000\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -572,6 +595,245 @@
 								"logout"
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Images",
+			"item": [
+				{
+					"name": "post image",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/Safwat Nabeel/Desktop/Association, Composition UML.JPG"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/imgs/upload",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"imgs",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/C:/Users/Safwat Nabeel/Desktop/Association, Composition UML.JPG"
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/imgs/updateUserImage",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"imgs",
+								"updateUserImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET IMAGE BLOB",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "{{api_url}}/imgs/image/6791439d64b07562caf3cc02",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"imgs",
+								"image",
+								"6791439d64b07562caf3cc02"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Profile Picture",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api_url}}/imgs/userImage",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"imgs",
+								"userImage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Cover Picture",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/imgs/userCover",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"imgs",
+								"userCover"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Cover",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/imgs/updateUserCover",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"imgs",
+								"updateUserCover"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Conversations",
+			"item": [
+				{
+					"name": "Create New Conversation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{api_url}}/conversations/6792a36eaaf50a23445e0df5",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"conversations",
+								"6792a36eaaf50a23445e0df5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Conversation with Friend ID",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Conversations",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete A Conversation",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "Create A Message In A Specific Conversation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"senderId\":\"678f7a1a9852a4703032c7a7\",\r\n    \"conversationId\":\"67a274814fec5ff3155b9e2e\",\r\n    \"text\":\"Hello I am Safwat Suliman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_url}}/messages",
+							"host": [
+								"{{api_url}}"
+							],
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Messages By Conversation ID",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
