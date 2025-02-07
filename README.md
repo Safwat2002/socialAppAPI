@@ -1,5 +1,12 @@
 # API Configrations
 
+## Environment Variables
+**set the following environment variables in .env file to complete setup**
+PORT=3110
+MONGO_URL=the url to connect to mongodb
+JWT_SECRET= secret key for token encryption and data signing
+CLIENT_URL=http://localhost:3001
+
 ## API endpoints
 
 ### **Base URL : http://localhost:3001/api** 
