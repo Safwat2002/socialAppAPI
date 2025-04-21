@@ -7,6 +7,8 @@
 - JWT_SECRET= secret key for token encryption and data signing
 - CLIENT_URL=http://localhost:3001
 
+## To see the full api documentation import Social_App.postman_collection.json file in Postman Program
+
 ## API endpoints
 
 ### **Base URL : http://localhost:3001/api** 
